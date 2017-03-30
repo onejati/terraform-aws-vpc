@@ -100,10 +100,7 @@ resource "aws_eip" "main" {
 }                                                                                                   
 resource "aws_nat_gateway" "main" {                
     allocation_id   = "${aws_eip.main.id}"             
-    subnet_id       = "${aws_subnet.WWW_a.id}" 
-    tags {
-        Name        = "{var.tag_name}-nat"
-    }	
+    subnet_id       = "${aws_subnet.WWW_a.id}" 	
 }
 
 #---------------------VGW----------------------#
