@@ -162,7 +162,7 @@ resource "aws_route_table_association" "private-4" {
   subnet_id = "${aws_subnet.DB_b.id}" 
   route_table_id = "${aws_route_table.private.id}"
 }       
-#-----------Private-Route-association----------------#
+#-----------Public-Route-association----------------#
 resource "aws_route_table_association" "public-1" {  
   subnet_id = "${aws_subnet.WWW_a.id}"   
   route_table_id = "${aws_route_table.public.id}"  
